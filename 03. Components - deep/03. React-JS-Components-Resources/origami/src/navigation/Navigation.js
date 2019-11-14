@@ -5,8 +5,11 @@ import Logo from "../resources/white-origami-bird.png";
 
 function Navigation () {
     return (
-        <nav className="Navigation">    
-            <ListItem />
+        <nav className="Navigation">
+            <ul>
+                <img src={Logo} alt="Origami bird"/>    
+                <ListItem />
+            </ul>
         </nav>
     )
 }

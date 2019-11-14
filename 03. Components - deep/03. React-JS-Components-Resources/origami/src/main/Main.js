@@ -1,10 +1,12 @@
 import React from "react";
-import ListItem from "../listItem/ListItem";
+import PostContainer from "../post-container/PostContainer";
+import "./Main.css";
 
 function Main (props) {
     return (
         <main className="Main">
-
+            <h1>Title</h1>
+            <PostContainer />
         </main>
     )
 }
