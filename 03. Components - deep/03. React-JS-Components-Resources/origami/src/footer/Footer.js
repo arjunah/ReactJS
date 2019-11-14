@@ -10,6 +10,7 @@ function Footer (props) {
                 <ListItem />
                 <img src={Logo} alt="Origami bird"/>
             </ul>
+            <p>Copyright SoftUni 2019</p>
         </footer>
     )
 }
