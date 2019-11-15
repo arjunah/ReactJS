@@ -5,7 +5,7 @@ import "./Main.css";
 function Main (props) {
     return (
         <main className="Main">
-            <h1>Title</h1>
+            <h1>Publications</h1>
             <PostContainer />
         </main>
     )

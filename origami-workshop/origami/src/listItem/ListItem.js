@@ -1,12 +1,20 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./ListItem.css";
+import { Link } from "react-router-dom";
 
-function ListItem (props) {
-    const nums = [1,2,3,4,5,6,7,8,9];
-    const items = nums.map(num => {
-        return <li key={num} className="listItem"><a href="#">Going to {num}</a></li>
-    });
-    return items;
+class ListItem extends React.Component {
+    render() {
+        return (
+            <Fragment>
+                <li className="listItem"><Link to="/">Home</Link></li>
+                <li className="listItem"><Link to="/post">Post</Link></li>
+                <li className="listItem"><Link to="/register">Register</Link></li>
+                <li className="listItem"><Link to="/login">Login</Link></li>
+                <li className="listItem"><Link to="/profile">Profile</Link></li>
+                <li className="listItem"><Link to="/about">About</Link></li>
+            </Fragment>
+        )
+    }
 }
 
 export default ListItem;
