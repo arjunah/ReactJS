@@ -1,5 +1,5 @@
 import React from "react";
-import "./Share-post.css";
+import "./SharePost.css";
 import Post from "../post/Post";
 
 function SharePost(props) {

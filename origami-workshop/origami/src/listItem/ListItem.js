@@ -11,7 +11,6 @@ class ListItem extends React.Component {
                 <li className="listItem"><Link to="/register">Register</Link></li>
                 <li className="listItem"><Link to="/login">Login</Link></li>
                 <li className="listItem"><Link to="/profile">Profile</Link></li>
-                <li className="listItem"><Link to="/about">About</Link></li>
             </Fragment>
         )
     }

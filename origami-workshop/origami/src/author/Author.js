@@ -5,7 +5,7 @@ function Author (props) {
         <div>
             <span>
                 <small>Author:</small>
-                Author Name
+                {props.children}
             </span>
         </div>
     )
