@@ -3,6 +3,7 @@ import Author from "../author/Author";
 import "./Post.css";
 import Logo from "../resources/logo.svg"
 import dbService from "../services/database";
+import requestURLs from "../services/config";
 
 class Post extends React.Component {
     state = {
@@ -10,11 +11,10 @@ class Post extends React.Component {
     }
 
     componentDidMount () {
-        dbService.get()
-        .then(posts => {
-            this.setState({ posts });
-            console.log(posts)
-        })
+        dbService.get(requestURLs.origamiGET)
+            .then(posts => {
+                this.setState({ posts });
+            });
     }
 
     render() {
