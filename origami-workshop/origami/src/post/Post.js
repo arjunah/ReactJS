@@ -19,7 +19,6 @@ class Post extends React.Component {
 
     render() {
         const { posts } = this.state;
-        console.log(posts)
         const output = posts ? posts.map(post => {
             return (
                 <div key={post._id} className="Post">

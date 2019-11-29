@@ -2,6 +2,7 @@ import React from "react";
 import "./Register.css";
 import dbService from "../services/database";
 import requestURLs from "../services/config";
+import { Redirect } from "react-router-dom"
 
 class Register extends React.Component {
     constructor (props) {
@@ -10,7 +11,8 @@ class Register extends React.Component {
         this.state = {
             username: "",
             password: "",
-            repassword: ""
+            repassword: "",
+            redirect: false
         }
     }
 
@@ -24,10 +26,15 @@ class Register extends React.Component {
         console.log(data);
         dbService.post(requestURLs.userRegisterPOST, data)
             .then(user => console.log(user))
-            .catch(error => console.log(error));
+            .catch(error => console.log(error))
+        this.setState({ redirect: true })
     }
     render() {
-        const { username, password, repassword } = this.state;
+        const { username, password, repassword, redirect } = this.state;
+
+        if (redirect) {
+            return <Redirect to="/" /> 
+        }  
         return (
             <div className="Register">
                 <h1>Register</h1>
